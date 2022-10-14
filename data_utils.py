@@ -20,7 +20,7 @@ def construct_vocab(file_, max_size=200000, mincount=5):
     word_pad = {'<s>': 2, '</s>': 3, '<pad>': 1, '<unk>': 0, '<stop>': 4}
     
     cnt = len(vocab2id)
-    with open(file_, 'r') as fp:
+    with open(file_, 'r',encoding="utf8") as fp:
         for line in fp:
             arr = re.split(' ', line[:-1])
             if arr[0] == ' ':
